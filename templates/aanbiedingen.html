@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+<h1>Aanbiedingen</h1>
+
+{% for item in data %}
+<h2>{{ item.naam }}</h2>
+<tr>
+    <td>{{ item.prijs }}</td>
+    <td>{{ item.aanbieding }}</td>
+    <td><a href="{{ item.url }}">Link</a></td>
+</tr>
+{% endfor %}
+
+{% endblock %}
